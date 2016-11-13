@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace hackerRank1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double mealCost = double.Parse(Console.ReadLine());
+            int tipPercent = Int32.Parse(Console.ReadLine());
+            int taxPercent = Int32.Parse(Console.ReadLine());
+            double totalCost;
+            double tip;
+            double tax;
+
+            if (mealCost > 0)
+            {
+
+                tip = mealCost * tipPercent / 100;
+
+                tax = mealCost * taxPercent / 100;
+
+                totalCost = mealCost + tip + tax;
+
+                Console.WriteLine("The total meal cost is " + Math.Round(totalCost) + " dollars.");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Please enter a number greater than Zero");
+            }
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
+
+        }
+    }
+}
